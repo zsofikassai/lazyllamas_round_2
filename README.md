@@ -34,13 +34,20 @@ bash build.sh
 in your terminal, because we created a script for installing all the necessary building blocks for the project.
 
 * **Note:** database connection is secured using a .env file and Python's dotenv package. You have to create it in the root folder of the project,
-  environmental variables declared in connection.get_connection_data() function.
+  environmental variables declared in connection.get_connection_data() function. You need to run 'create.sql' and 'dump.sql' to set up the database.
+  There is one amigo and two students already in the database with which you can try out our app.
+    amigo access email-address is: amigo@example.com, student access email-addresses are: student@example.com, student1@example.com, student6@example.com
+    the password is: 'cica' in all cases
+  
+  
+  
 
 ### Basically, you'll need these things to run the app:
 
         -Python3
         -PostgreSQL
         -dependencies from the requirements.txt file
+        
 
 ## Useful links
 
