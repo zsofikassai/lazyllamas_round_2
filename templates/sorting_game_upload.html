@@ -1,0 +1,32 @@
+{% extends 'template.html' %}
+{% block title %} Húzd és dobd! {% endblock %}
+{% block head %}
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../static/style/sorting-game.css"/>
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<script type="module" src="/static/js/sortingUpload.js" defer></script>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="word-container">
+        <div id="word-form" >
+            <label for="language"> Nyelv: </label>
+            <input type="text" id="language" name="language" required><br><br>
+            <label for="theme"> Téma: </label>
+            <input type="text" id="theme" required>
+            <input id="word-source" class="words" type="text" placeholder="Írj ide">
+            <p id="addWord" >Új szó hozzáadása</p>
+        </div>
+    </div>
+
+    <div class="category-container">
+        <div class="category-card"><input type="text" class="category-input" placeholder="Írj ide" required></div>
+        <div class="category-card"><input type="text" class="category-input" placeholder="Írj ide" required></div>
+        <div class="category-card"><input type="text" class="category-input" placeholder="Írj ide" required></div>
+        <div class="category-card"><input type="text" class="category-input" placeholder="Írj ide" required></div>
+        <p  class="save">Mentés</p>
+    </div>
+</div>
+</div>
+{% endblock %}

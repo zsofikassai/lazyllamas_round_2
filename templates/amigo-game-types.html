@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feladat témák</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/game-types.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/game-types-send.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap"
+          rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/exerciseTypes.js') }}" defer></script>
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="main">
+    <h2>Feladatok</h2>
+    <div class="exercises">
+          {% if exercise == "listening-game" -%}
+                {% for game in games %}
+                    {% if game[0] -%}
+                        <div class="exercise-type" id="{{ exercise }}/{{ game[0].game_id }}"><p>{{ game[0].theme }}</p>
+                            <a href="/send/{{ exercise }}/{{ game.id }}"><button> Küldés diáknak</button></a>
+                        </div>
+                    {% else %}
+                        <div class="exercise-type" id="{{exercise}}/{{game.id}}"><p>{{ game.theme }}</p>
+                            <a href="/send/{{ exercise }}/{{ game.id }}"><button> Küldés diáknak</button></a>
+                        </div>
+                {% endif %}
+                {% endfor %}
+            {% else %}
+                {% for game in games %}
+                    <div class="exercise-type" id="play-game/{{ exercise }}/{{ game.id }}">
+                    <p>{{ game.theme }}</p>
+                        <a href="/send/{{ exercise }}/{{ game.id }}"><button> Küldés diáknak</button></a>
+                    </div>
+                    {% endfor %}
+        {% endif %}
+                </div>
+
+</div>
+</body>
+</html>

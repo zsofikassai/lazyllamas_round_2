@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amatic SC';
+    font-size: 40px;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60vh;
+    width: 80%;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.circle1 {
+    background-color: #993166;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+    z-index: -1;
+}
+
+.circle2 {
+    background-color: #5C9123;
+    width: 25%;
+    padding-top: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: -8%;
+    right: -3%;
+    z-index: -1;
+}
+
+.exercise {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 25%;
+    height: 20vh;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 30px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+    filter: drop-shadow(11px 5px 25px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(10px);
+}
+
+.exercise:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.exercise:active{
+    transform: scale(0.95);
+}

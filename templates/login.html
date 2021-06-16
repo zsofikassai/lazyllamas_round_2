@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style/login.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+
+    <title> Login </title>
+    <script src="../static/js/login.js" defer></script>
+
+
+</head>
+<body>
+<div class="circle2"></div>
+<div class="circle3"></div>
+<div class="main">
+    <div class="form" id="container">
+        <div class="login-form form-container">
+            <form action="/login" method="post">
+                <h2>Üdv újra nálunk</h2>
+                <input type="email" name="email" placeholder="E-mail cím"><br>
+                <input type="password" name="password" placeholder="Jelszó"><br>
+                <button type="submit">Belépés</button>
+            </form>
+
+        </div>
+        <div class="register-form form-container">
+            <h2>Nincs még fiókod?</h2>
+            <p>Új felhasználói fiók létrehozásához kérlek írj nekünk az <em><strong>irjnekunk@amigosagyerekekert.hu</strong></em> e-mail címen.</p>
+            <h2>Elfelejtetted a jelszavad?</h2>
+            <button>Új jelszó kérése</button>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h2>Van már fiókod?</h2>
+                    <button class="ghost" id="sign-in">Bejelentkezés</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h2>Nem tudsz bejelentkezni?</h2>
+                    <button class="ghost" id="sign-up">Segítség</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

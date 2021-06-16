@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h3 h4 h5 h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+}
+
+.circle1 {
+    background-color: #993166;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+    z-index: -1;
+}
+
+.circle2 {
+    background-color: #5C9123;
+    width: 25%;
+    padding-top: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: -8%;
+    right: -3%;
+    z-index: -1;
+}
+
+
+/* Student menu */
+
+.student-menu {
+    height: 80vh;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card-link {
+    width: 20%;
+    height: 35vh;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.8s ease-out;
+}
+
+
+.card-link:nth-child(1):hover, .amigo-card-link:nth-child(1):hover, .amigo-card-link:nth-child(3):hover, .amigo-card-link:nth-child(5):hover{
+    transform: translateY(-80px) rotate(5deg);
+}
+
+.card-link:nth-child(2):hover, .amigo-card-link:nth-child(2):hover, .amigo-card-link:nth-child(4):hover {
+    transform: translateY(-80px) rotate(-5deg);
+}
+
+.card-link:last-child:hover, .amigo-card-link:last-child:hover {
+    transform: rotate(360deg) scale(0.7);
+}
+
+.card {
+    background-image: url("/static/images/menu_rectangle.png");
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(11px 5px 25px rgba(0, 0, 0, 0.25));
+}
+
+.card h2 {
+    color: #1c1c1c;
+}
+
+
+/* Amigos menu */
+
+.amigos-menu {
+    height: 80vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.amigo-card-link {
+    width: 70%;
+    height: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.8s ease-out;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+
+.student-card-small {
+    position: relative;
+    top: 3%;
+    float: top;
+    background-image: url("/static/images/math.jpg");
+    width: 4vw;
+    height: 4vh;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.matching-game {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 100px 20px 0 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    /*align-content: stretch;*/
+}
+
+.image-container {
+    background-color: rgba(255, 255, 255, 0.75);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 0.2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+    justify-items: center;
+}
+
+.flashcard {
+    background: white;
+    justify-content: center;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.flashcard-container {
+    position: relative;
+}
+
+.flashcard-active {
+    /*width: 350px;*/
+    /*height: 238px;*/
+    /*border-radius: 10px;*/
+    border-style: groove;
+    border-color: #993166;
+    border-width: thick;
+}
+
+.word-container {
+    background: white;
+    text-align: center;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-row-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Lato';
+    font-size: 16px;
+}
+
+.marked-green {
+    color: #5C9129;
+    font-size: x-large;
+}
+
+.marked-purple {
+    color: #993166;
+    font-size: x-large;
+}
+
+.tick {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    bottom: 7%;
+    right: 3%;
+    z-index: 2;
+}
+
+li {
+    font-size: larger;
+}
+
+li:not(:last-child) {
+    margin-bottom: 65px;
+}
+
+#theme {
+    margin-bottom: 95px;
+    font-size: xxx-large;
+}
+
+.stopper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-family: 'Lato';
+    font-size: 38px;
+    padding: 15px;
+    border-radius: 30px;
+}
+

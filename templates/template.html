@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/style/main.css"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+<!--    <script defer src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_UNIQUE_KEY"></script>-->
+
+    <title>{% block title %} Amigos {% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+<input type="button" onclick="responsiveVoice.speak('apple')" value="help">
+{% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+{
+    padding: 0
+;
+    margin: 0
+;
+    box-sizing: border-box
+;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+h3 h4 h5 h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 30px;
+    padding: 15px;
+    height: 80vh;
+    width: 60%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.circle1 {
+    background-color: #993166;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+    z-index: -1;
+}
+
+.circle2 {
+    background-color: #5C9123;
+    width: 25%;
+    padding-top: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: -8%;
+    right: -3%;
+    z-index: -1;
+}
+
+.comprehensive-reading {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    grid-gap: 40px;
+}
+
+.reading-container {
+    background-image: url("/static/images/menu_rectangle.png");
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.question-container li {
+    list-style: none
+}
+
+.question-container {
+    font-family: 'Lato';
+    padding-top: 50px;
+    justify-self: center;
+}
+
+.question-container input {
+    background: #eee;
+    border-radius: 30px;
+    border: none;
+    padding: 12px 15px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.question-container input:focus {
+    transition: 0.5s;
+    background: white;
+    outline: none;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #993166;
+    background: #993166;
+    background: linear-gradient(to left, #993166, #993152);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 10px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}

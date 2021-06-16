@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Összekötős játék</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/navigation.css') }}"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="stopper">
+    <div id="stopper-display">
+        00:00
+    </div>
+
+</div>
+<h2 class="theme"></h2>
+<div class="matching-game" id="{{game_id}}">
+    <div class="word-container">
+
+    </div>
+
+    <div class="image-container">
+
+    </div>
+</div>
+
+<script  type="module" src="{{ url_for('static', filename='js/matchingGame.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='js/stopper.js') }}"></script>
+</body>
+</html>

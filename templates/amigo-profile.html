@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Felhasználók</title>
+    <link href="../static/style/amigo_profile.css" rel='stylesheet'>
+    <link href="../static/style/navigation.css" rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="main">
+    <div class="section1">
+        <h2>Személyes adataim</h2>
+        <form action="/profile">
+            <p>Nevem:</p>
+            <input type="text" id="name" name="name">
+            <p>Születési időm:</p>
+            <input type="date" id="birthday" name="birthday">
+            <p>Jelszavam:</p>
+            <input type="password" id="password" name="password">
+            <button type="submit">Adatok módosítása</button>
+        </form>
+    </div>
+    <div class="section2">
+        <h2>Új felhasználó regisztrálása</h2>
+        <form>
+            <p>Név:</p>
+            <input type="text" id="name" name="name">
+            <p>E-mail:</p>
+            <input type="text" id="email" name="email" value="">
+            <p>Születési idő:</p>
+            <input type="date" id="birthday" name="birthday">
+            <p>Jelszó:</p>
+            <input type="password" id="password" name="password">
+            <p>Amigo jogosultság</p>
+            <input type="checkbox" id="role" name="role">
+            <button type="submit">Felhasználó létrehozása</button>
+        </form>
+    </div>
+</body>
+</html>

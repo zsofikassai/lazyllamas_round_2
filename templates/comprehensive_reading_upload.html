@@ -1,0 +1,30 @@
+{% extends 'template.html' %}
+{% block title %} Szövegértés {% endblock %}
+{% block head %}
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../static/style/comprehensive-reading.css"/>
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<script type="module" src="/static/js/comprehensiveUpload.js" defer></script>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="text-container">
+        <form id="text-form">
+            <input type="text" id="language" name="language" placeholder="Nyelv" required>
+            <input type="text" name="theme" placeholder="Téma" id="theme" required>
+            <textarea type="text" name="text" placeholder="Másold ide a szöveget" id="long-text"
+                      maxlength="1000" required></textarea>
+        </form>
+    </div>
+    <div class="question-container">
+        <form>
+            <label for="fixed"> Új kérdés: </label>
+            <input type="text" class="questions fixed" placeholder="Itt tehetsz fel kérdéseket" id="fixed" required>
+            <input type="button" value="Hozzáadás" id="button" class="submit">
+            <input type="submit" name="submit" value="Mentés" id="submit" class="submit">
+        </form>
+    </div>
+</div>
+{% endblock %}

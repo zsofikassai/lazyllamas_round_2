@@ -1,0 +1,124 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: larger;
+    line-height: 300%;
+    letter-spacing: 2px;
+    display: flex;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-container {
+    opacity: 0.8;
+    position: relative;
+    top: 1%;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    height: 95vh;
+    background: white;
+}
+
+#text-form {
+    justify-items: center;
+    padding: 15px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 12fr;
+}
+
+.question-container {
+    position: relative;
+    top: 1%;
+    bottom: 1%;
+    right: 1%;
+    background: #8BBF58;
+    /*display: grid;*/
+    /*grid-template-rows: 1fr 1fr 1fr;*/
+    /*grid-gap: 10px;*/
+    line-height: 150%;
+    padding: 20px;
+    height: 95vh;
+    /*justify-content: center;*/
+}
+
+input[type=text] {
+    line-height: 200%;
+    text-align: center;
+    border-radius: 1em;
+    outline: none;
+    border: none;
+}
+
+input[type=submit] {
+    color: white;
+    outline: none;
+    background-color: #993166;
+    padding: 5px;
+    border-radius: 1em;
+}
+
+
+.submit {
+    color: white;
+    outline: none;
+    background-color: #993166;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 1em;
+}
+
+#button {
+    position: relative;
+    top: 40%;
+    left: 0;
+    margin-right: 30px;
+}
+
+#submit {
+    font-size: x-large;
+    position: absolute;
+    top: 82%;
+    left: 82%;
+    font-family: "Amatic SC", sans-serif;
+}
+
+#theme {
+    font-size: xx-large;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bold;
+}
+
+#theme::placeholder {
+    color: #8BBF58;
+}
+
+#long-text {
+    font-size: large;
+    color: black;
+}
+
+.container {
+    position: relative;
+    width: 96vw;
+    height: 98vh;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    background-image: url("/static/images/math.jpg");
+}
+
+.questions {
+    width: 600px;
+    height: 10px;
+    outline: none;
+    border-radius: 20%;
+    padding: 20px;
+    text-align: left;
+    font-family: "Lato", sans-serif;
+    font-size: large;
+    /*background: #993166;*/
+    margin-top: 80px;
+    /*margin-left: 180px;*/
+}

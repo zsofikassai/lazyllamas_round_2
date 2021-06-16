@@ -1,0 +1,69 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: larger;
+    line-height: 300%;
+    letter-spacing: 2px;
+}
+
+.circle1 {
+    background-color: #993166;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+}
+
+.circle2 {
+    background-color: #5C9123;
+    width: 25%;
+    padding-top: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: -8%;
+    right: -3%;
+}
+
+.form-container {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+}
+
+input {
+    
+}
+
+input[type=text] {
+    line-height: 200%;
+    text-align: center;
+    border-radius: 1em;
+    outline: none;
+    border: none;
+}
+
+input[type=file], input[type=submit] {
+    color: white;
+    outline: none;
+    background-color: #993166;
+    padding: 5px;
+    border-radius: 1em;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    border: none;
+    background-color: #993166;
+    box-shadow: none;
+    color: white;
+}
+
+#submit {
+    font-size: xx-large;
+    position: absolute;
+    top: 90%;
+    left: 105%;
+    padding: 10px;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bold;
+}

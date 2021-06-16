@@ -1,0 +1,64 @@
+{% extends 'template.html' %}
+{% block title %} Amigos {% endblock %}
+{% block head %} {{ super() }} {% endblock %}
+{% block content %}
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="main">
+
+        {% if session['amigo'] == False %}
+            <div class="student-menu">
+                <a class="card-link" href="/my-exercises/{{id}}">
+                    <div class="card">
+                        <h2>Feladatok</h2>
+                    </div>
+                </a>
+                <a class="card-link" href="{{ url_for('profile') }}">
+                    <div class="card">
+                        <h2>Profilom</h2>
+                    </div>
+                </a>
+                <a class="card-link" href="{{ url_for('logout') }}">
+                    <div class="card">
+                        <h2>Kijelentkezés</h2>
+                    </div>
+                </a>
+            </div>
+
+
+        {% elif session['amigo'] %}
+            <div class="amigos-menu">
+            <a class="amigo-card-link" href="{{ url_for('new_exercise') }}">
+                <div class="card column exercise-change">
+                    <h2>Új feladat</h2>
+                </div>
+            </a>
+                <a class="amigo-card-link" href="{{ url_for('my_exercises') }}">
+                <div class="card column exercise-change">
+                    <h2>Feladatok</h2>
+                </div>
+                </a>
+                <a class="amigo-card-link" href="{{ url_for('solutions') }}">
+                <div class="card column exercise-change">
+                    <h2>Megoldások</h2>
+                </div>
+                </a>
+                <a class="amigo-card-link" href="{{ url_for('students') }}">
+                <div class="card column exercise-change">
+                    <h2>Diákok</h2>
+                </div>
+                </a>
+                <a class="amigo-card-link" href="{{ url_for('profile') }}">
+                <div class="card column exercise-change">
+                    <h2>Felhasználók</h2>
+                </div>
+                </a>
+                <a class="amigo-card-link" href="{{ url_for('logout') }}">
+                <div class="card column exercise-change">
+                    <h2>Kijelentkezés</h2>
+                </div>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

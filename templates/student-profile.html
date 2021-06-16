@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+    <link href="../static/style/student_profile.css" rel='stylesheet'>
+    <link href="../static/style/navigation.css" rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Amatic SC';
+            font-size: 22px;
+        }
+    </style>
+    <title>Profilom</title>
+    <script src="../static/js/badges.js" defer></script>
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle2"></div>
+<div class="circle3"></div>
+<h1> Profilom</h1>
+<div class="main">
+    <div class="section1">
+        <h2>Személyes adataim</h2>
+
+        <form action="/profile" method="post">
+            <label for="name">Nevem:</label>
+            <input type="text" id="name" name="name" value="{{ student['name'] }}">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="{{ student['email'] }}">
+            <label for="birthday">Születési időm:</label>
+            <input type="date" id="birthday" name="birthday" value="{{ student['birthday'] }}">
+            <button type="submit">Adatok módosítása</button>
+        </form>
+    </div>
+    <div class="section2">
+        <h2> Eredményeim </h2>
+        <div id="progress">
+            <div class="language">
+                <label for="languages">Tanult nyelvek:</label>
+                <p id="languages">{{ languages['languages'] }}</p>
+            </div>
+            <div class="points">
+                <label for="points">Pontjaim:</label>
+                <p id="points">{{ student['points'] }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <h2>Kitűzőim:</h2>
+        <div class="progress">
+            <div class="progressbar">
+                <div class="progression"></div>
+            </div>
+
+        </div>
+        <div class="badges">
+            <div class="badge">
+                <div class="picture">
+                    <img src="../static/images/badges/badge_turtle.png">
+                </div>
+                <div class="cover" id="1"></div>
+            </div>
+
+            <div class="badge">
+                <div class="picture">
+                    <img src="../static/images/badges/badge_panda.png">
+                </div>
+                <div class="cover" id="2"></div>
+            </div>
+
+            <div class="badge">
+                <div class="picture">
+                    <img src="../static/images/badges/badge_dolphin.png">
+                </div>
+                <div class="cover" id="3"></div>
+            </div>
+
+            <div class="badge">
+                <div class="picture">
+                    <img src="../static/images/badges/badge_owl.png">
+                </div>
+                <div class="cover" id="4"></div>
+            </div>
+
+            <div class="badge">
+                <div class="picture">
+                    <img src="../static/images/badges/badge_wolf.png">
+                </div>
+                <div class="cover" id="5"></div>
+            </div>
+            <div class="badge">
+                <div class="picture">
+                    <img src="../static/images/badges/badge_lion.png">
+                </div>
+                <div class="cover" id="6"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

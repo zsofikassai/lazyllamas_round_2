@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle1 {
+    background-color: #993166;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+}
+
+.circle2 {
+    background-color: #5C9123;
+    width: 25%;
+    padding-top: 25%;
+    border-radius: 50%;
+    position: absolute;
+    top: -8%;
+    right: -3%;
+}
+
+
+.memory-game {
+    perspective: 1000px;
+    width: 80%;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.25));
+}
+
+.memory-card {
+    transform-style: preserve-3d;
+    width: 25%;
+    height: 33.33333%;
+    position: relative;
+    display: flex;
+    transform: scale(1);
+    transition: transform .1s;
+    backface-visibility: hidden;
+    padding-bottom: 10%;
+}
+
+.front-face {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+
+    transform: rotateY(180deg);
+}
+
+.front-face p {
+
+    margin-top: 10px;
+    /*transform: translateX(50%);*/
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+
+.back-face {
+    position: absolute;
+    margin: auto;
+    width: 215px;
+    height: 215px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60%);
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+#theme {
+    display: none;
+}
+
+.stopper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    font-family: 'Lato';
+    font-size: 38px;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+
+

@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    overflow: hidden;
+}
+
+.circle2 {
+    background-color: rgba(92, 145, 35, 0.6);
+    width: 40%;
+    padding-top: 40%;
+    border-radius: 50%;
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    z-index: -1;
+}
+
+.circle3 {
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -120%;
+    left: -30%;
+    z-index: -2;
+}
+
+h1{
+    margin-bottom: 50px;
+}
+
+.main {
+    height: 80vh;
+    width: 70%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(11px 5px 25px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section1, .section2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+}
+
+.section1 h2 {
+    margin-bottom: 70px;
+}
+
+.section2 h2 {
+    margin-top: 100px
+}
+
+
+.section1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.section1 input {
+    background: #eee;
+    border-radius: 30px;
+    border: none;
+    padding: 12px 15px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.section1 input:focus {
+    transition: 0.5s;
+    background: white;
+    outline: none;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #993166;
+    background: #993166;
+    background: linear-gradient(to left, #993166, #993152);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 80px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+.section2 {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language {
+    margin-bottom: 70px;
+}
+
+.points {
+    margin-bottom: 200px;
+}
+
+.language, .points{
+    font-size: 38px;
+}
+
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progressbar {
+    background: #eee;
+    border-radius: 30px;
+    border: none;
+    padding: 12px 15px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 30px;
+}
+
+.progression {
+    position: absolute;
+    background: #993166;
+    background: linear-gradient(to left, #993166, #993152);
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+}
+
+.badges {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-self: center;
+    justify-self: center;
+    height: 70%;
+    gap: 5%;
+}
+
+.badge {
+    position: relative;
+}
+
+.picture {
+    height: 100%;
+    width: 100%;
+}
+
+
+.picture img {
+    object-fit: contain;
+    height: 100px;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #eee;
+    width: 95%;
+    height: 95%;
+    border-radius: 30px;
+}
+
+
+
+
+

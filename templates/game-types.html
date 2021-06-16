@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feladataim</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/game-types.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap"
+          rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/exerciseTypes.js') }}" defer></script>
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="main">
+
+
+
+        {% if exercise == "listening-game" -%}
+            {% if games %}
+                <h2>Témák</h2>
+       <div class="exercises">
+                {% for game in games %}
+
+                    {% if game[0] -%}
+                        <div class="exercise-type" id="{{ exercise }}/{{ game[0].game_id }}"><p>{{ game[0].theme }}</p></div>
+                    {% else %}
+                        <div class="exercise-type" id="{{exercise}}/{{game.id}}"><p>{{ game.theme }}</p></div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                    <div class="no-exercise">
+                        <h2> Jelenleg nincs ilyen feladatod</h2>
+                {% if not all %}
+                    <a href="/listening-games">
+                        <button> Böngészés az összes feladat között</button>
+                    </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% if games %}
+                <h2>Témák</h2>
+              <div class="exercises">
+                {% for game in games %}
+                        <div class="exercise-type" id="play-game/{{exercise}}/{{game.id}}"><p>{{ game.theme }}</p></div>
+                {% endfor %}
+            {% else %}
+                <div class="no-exercise">
+                <h2> Jelenleg nincs ilyen feladatod</h2>
+                {% if not all %}
+                    <a href="/game-list/{{ exercise }}">
+                        <button> Böngészés az összes feladat között</button>
+                    </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

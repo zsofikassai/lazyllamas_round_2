@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Szövegértés</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/reading.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/navigation.css') }}"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+
+<div class="main">
+    <div class="comprehensive-reading" id="{{ game_id }}">
+        <div class="reading-container">
+            <h2 class="theme"></h2>
+
+        </div>
+        <div class="question-container">
+
+        </div>
+    </div>
+    <button id="save"> Beküldés</button>
+</div>
+<script type="module" src="{{ url_for('static', filename='js/comprehensiveReading.js') }}"></script>
+</body>
+</html>

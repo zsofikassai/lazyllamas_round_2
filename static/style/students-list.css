@@ -1,0 +1,64 @@
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(45deg, #5C9129, #8BBF58);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /*margin-bottom: 20px;*/
+    /*padding: 24px;*/
+    border-radius: 2px;
+    /*background: #8BBF58;*/
+    background: linear-gradient(45deg, #5C9129, #8BBF58);;
+}
+
+
+table {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    border-spacing: 0;
+    border: 1px solid #993166;
+    border-radius: 3px;
+}
+
+table th {
+    color: #5C9129;
+    background: #993166;
+}
+
+table th a {
+    color: #fff;
+}
+
+table th a:hover {
+    color: #fff;
+}
+
+table td {
+    font-size: 13px;
+}
+
+table th,
+table td {
+    margin: 0;
+    padding: 6px;
+}
+
+input{
+   border-radius: 20px;
+    border: 1px solid #993166;
+    color: #993166;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}

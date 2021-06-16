@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="module" src="{{ url_for('static', filename='js/searchStudents.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/send-task.css') }}">
+    <title>Diákok</title>
+
+    <link href="{{ url_for('static', filename='style/navigation.css') }}" rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+{% include "navigation.html" %}
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="main">
+    <h2>Diák keresése</h2>
+    <div class="filter">
+        <div class="search-bar">
+            <h3>Nyelv: </h3>
+            <input type="text" id="language">
+            <h3>E-mail: </h3>
+            <input type="text" id="email">
+            <h3>Kor: </h3>
+            <input type="text" id="age">
+        </div>
+        <div class="results">
+            <div class="search-bar">
+                <div class="table-container"  >
+                    <table id="container" class="feedback">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

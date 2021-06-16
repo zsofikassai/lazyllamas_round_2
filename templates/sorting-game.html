@@ -1,0 +1,25 @@
+{% extends 'template.html' %}
+{% block title %} Húzd és dobd! {% endblock %}
+{% block head %}
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/sorting-game.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/navigation.css') }}"/>
+<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<script type="module" src="{{ url_for('static', filename='js/sortingGame.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+    {% include "navigation.html" %}
+<section class="sorting-game" id="{{game_id}}">
+<div class="container">
+    <div class="word-container droppable">
+
+    </div>
+
+    <div class="category-container">
+
+        <p class="submit">Beküldés</p>
+    </div>
+</div>
+    </section>
+{% endblock %}
