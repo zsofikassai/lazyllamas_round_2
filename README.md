@@ -1,5 +1,9 @@
 # **The Amigos project from LazyLlamas**
 
+## **YouTube link to presentation** ##
+
+https://youtu.be/UwdoOw4x5vI
+
 ## **Overview**
 
 This repository contains a language-learning app's prototype made for Amigos a gyerekekért foundation during the
