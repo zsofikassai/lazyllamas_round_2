@@ -3,35 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Hallgatás játék feltöltés</title>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/listening_upload.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/navigation.css') }}">
+
     <script type="text/javascript" src="{{ url_for('static', filename='js/listeningGameUpload.js') }}" defer></script>
 </head>
 <body>
+{% include "navigation.html" %}
 <div class="circle1"></div>
 <div class="circle2"></div>
+<div class="main">
 <div class="form-container">
     <label for="theme"> Téma: </label>
     <input type="text" id="theme" required>
     <label for="language"> Nyelv: </label>
     <select name="language" id="language" required>
         {% for language in languages %}
-        <option value="{{language['voice_code']}}">{{ language['language'] }}</option>  <br><br>
+        <option value="{{language['voice_code']}}">{{ language['language'] }}</option>
         {% endfor %}
     </select>
-
+<div class="cards">
     {% for n in range(6) %}
-    <br><br>
     <div class="card">
     <label for="correct-answer"> Helyes válasz: </label>
     <input type="text" class="card {{n}}" data-name="{{n}}" id="correct-answer"  required>
     <h4> Helytelen válaszok: </h4>
-    <input type="text" class="card {{n}}"  data-name="{{n}}" name="text" required><br><br>
-    <input type="text"  class="card {{n}}" data-name="{{n}}" name="text" required><br><br>
+    <input type="text" class="card {{n}}"  data-name="{{n}}" name="text" required>
+    <input type="text"  class="card {{n}}" data-name="{{n}}" name="text" required>
     </div>
-
     {% endfor %}
+</div>
     <button id="save">
         Mentés
     </button>
+</div>
 </div>
 </body>
 </html>
