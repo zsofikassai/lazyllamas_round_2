@@ -8,39 +8,38 @@ body {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
 
 .text-container {
-    opacity: 0.8;
     position: relative;
-    top: 1%;
-    bottom: 1%;
-    left: 1%;
-    right: 1%;
-    height: 95vh;
-    background: white;
+    height: auto;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 #text-form {
     justify-items: center;
     padding: 15px;
-    display: grid;
-    grid-template-rows: 1fr 1fr 12fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#text-form input {
+    margin: 15px;
 }
 
 .question-container {
-    position: relative;
-    top: 1%;
-    bottom: 1%;
-    right: 1%;
     background: #8BBF58;
-    /*display: grid;*/
-    /*grid-template-rows: 1fr 1fr 1fr;*/
-    /*grid-gap: 10px;*/
     line-height: 150%;
     padding: 20px;
-    height: 95vh;
-    /*justify-content: center;*/
+    height: 80vh;
 }
 
 input[type=text] {
@@ -102,11 +101,11 @@ input[type=submit] {
 
 .container {
     position: relative;
-    width: 96vw;
-    height: 98vh;
+    width: 80%;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    background-image: url("/static/images/math.jpg");
+    /*background-image: url("/static/images/math.jpg");*/
 }
 
 .questions {
@@ -121,4 +120,31 @@ input[type=submit] {
     /*background: #993166;*/
     margin-top: 80px;
     /*margin-left: 180px;*/
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #993166;
+    background: #993166;
+    background: linear-gradient(to left, #993166, #993152);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+textarea {
+    height: 50vh;
+    width: 25vw;
 }
