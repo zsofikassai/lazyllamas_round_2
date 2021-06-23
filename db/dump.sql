@@ -74,7 +74,7 @@ Occasionally, a Greyhound may bark; however, they are generally not barkers, whi
 
 A common misconception regarding Greyhounds is that they are hyperactive. This is usually not the case with retired racing Greyhounds. Greyhounds can live comfortably as apartment dogs, as they do not require much space and sleep almost 18 hours per day. Due to their calm temperament, Greyhounds can make better "apartment dogs" than smaller, more active breeds.', ARRAY ['What are greyhounds like?', 'Do greyhounds make good family pets?']);
 
-INSERT INTO sorting_game(language, theme, categories, words) VALUES ( 'English', 'Állatok',  ARRAY['Insects', 'Birds', 'Has 4 legs'], ARRAY['Horse', 'Lion', 'Butterfly', 'Penguin', 'Llama']);
+INSERT INTO sorting_game(language, theme, categories, words) VALUES ( 'English', 'Animals',  ARRAY['Insects', 'Birds', 'Mammal', 'Reptile'], ARRAY['Horse', 'Lion', 'Butterfly', 'Penguin', 'Llama']);
 
 INSERT INTO listening_game(game_id, language, theme, answers, correct_answer)
 VALUES (1, 'US English Female', 'Állatok', ARRAY['cat', 'cate', 'kat'], 'cat');
@@ -82,6 +82,13 @@ INSERT INTO listening_game(game_id, language, theme,  answers, correct_answer)
 VALUES (1, 'US English Female', 'Állatok', ARRAY['lion', 'leon', 'lione'], 'lion');
 INSERT INTO listening_game(game_id, language, theme, answers, correct_answer)
 VALUES (1, 'US English Female', 'Állatok', ARRAY['llama', 'lama', 'lamma'], 'llama');
+INSERT INTO listening_game(game_id, language, theme, answers, correct_answer)
+VALUES (1, 'US English Female', 'Állatok', ARRAY['wolf', 'wolfe', 'volv'], 'wolf');
+INSERT INTO listening_game(game_id, language, theme,  answers, correct_answer)
+VALUES (1, 'US English Female', 'Állatok', ARRAY['dog', 'daug', 'dawg'], 'dog');
+INSERT INTO listening_game(game_id, language, theme, answers, correct_answer)
+VALUES (1, 'US English Female', 'Állatok', ARRAY['dolphin', 'delphin', 'dolfin'], 'dolphin');
+
 
 INSERT INTO memory_game(language, theme, image1, text1, image2, text2, image3, text3, image4, text4, image5, text5, image6, text6)
 VALUES('English', 'Állatok',
