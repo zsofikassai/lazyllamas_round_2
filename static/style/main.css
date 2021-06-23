@@ -159,7 +159,6 @@ body {
     background: white;
     justify-content: center;
     border-radius: 10px;
-    width: 300px;
     height: 200px;
 }
 
@@ -168,9 +167,6 @@ body {
 }
 
 .flashcard-active {
-    /*width: 350px;*/
-    /*height: 238px;*/
-    /*border-radius: 10px;*/
     border-style: groove;
     border-color: #993166;
     border-width: thick;
@@ -184,20 +180,24 @@ body {
     grid-row-gap: 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    font-family: 'Lato';
-    font-size: 16px;
+    font-family: 'Amatic SC';
+    font-size: 28px;
+}
+
+.word-container ul{
+    list-style-type: none;
 }
 
 .marked-green {
     color: #5C9129;
-    font-size: x-large;
+    font-size: 28px;
 }
 
 .marked-purple {
     color: #993166;
-    font-size: x-large;
+    font-size: 28px;
 }
 
 .tick {

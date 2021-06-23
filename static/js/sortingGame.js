@@ -15,7 +15,7 @@ const sortingGame = {
         for (let i = 0; i < data.categories.length; i++) {
             const categoryContainer = document.querySelector('.category-container');
             let categoryDiv = `<div class="category-card droppable">${data.categories[i]}</div>`;
-            categoryContainer.insertAdjacentHTML('beforeend', categoryDiv);
+            categoryContainer.insertAdjacentHTML('afterbegin', categoryDiv);
         }
         logic();
     }
